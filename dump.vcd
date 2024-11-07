@@ -1,5 +1,5 @@
 $date
-	Thu Nov  7 22:29:04 2024
+	Thu Nov  7 23:04:52 2024
 $end
 $version
 	Icarus Verilog
@@ -17,8 +17,8 @@ $scope module uut $end
 $var wire 8 & A [7:0] $end
 $var wire 3 ' ALU_Oper [2:0] $end
 $var wire 8 ( B [7:0] $end
-$var reg 8 ) ALU_Out [7:0] $end
-$var reg 1 ! CY $end
+$var wire 1 ! CY $end
+$var wire 8 ) ALU_Out [7:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -35,11 +35,12 @@ b1001 %
 b0 $
 b11111111 #
 b1000 "
-0!
+1!
 $end
 #10
 b10 "
 b10 )
+0!
 b10111011 %
 b10111011 (
 b1 #
@@ -65,7 +66,6 @@ b10011 &
 b11 $
 b11 '
 #40
-1!
 b1010100 "
 b1010100 )
 b1001 %
@@ -84,7 +84,6 @@ b1010101 &
 b101 $
 b101 '
 #60
-0!
 b11110101 "
 b11110101 )
 b1011010 %
