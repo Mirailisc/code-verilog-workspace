@@ -1,4 +1,6 @@
 *.out
 *.xcodeproj
 .DS_Store
-main
+
+alu_tb
+*.vcd

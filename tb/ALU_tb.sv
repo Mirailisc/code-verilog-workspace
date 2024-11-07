@@ -13,42 +13,32 @@ module ALU_tb;
     );
     
     initial begin
-        $dumpfile("dump.vcd");
+      $dumpfile("dump.vcd");
     	$dumpvars(0, ALU_tb);
-    	
-      	// Test cases
         // Add: A = 8'hFF, B = 9
         ALU_Oper = 3'b000; A = 8'hFF; B = 8'd9;
        	#10;
-        
       	// Increment: A = 1
         ALU_Oper = 3'b001; A = 8'd1; B = 8'hBB;
       	#10;
-      
         // Subtract: A = 8'h25, B = 3
         ALU_Oper = 3'b010; A = 8'h25; B = 8'd3;
       	#10;
-
         // Decrement: A = 8'h13
         ALU_Oper = 3'b011; A = 8'h13; B = 8'hBB;
       	#10;
-
         // Shift Left (SHL): A = 8'hAA, B = 9
         ALU_Oper = 3'b100; A = 8'hAA; B = 8'd9;
       	#10;
-      
         // Shift Right (SHR): A = 8'h55, B = 8'hBB
         ALU_Oper = 3'b101; A = 8'h55; B = 8'hBB;
       	#10;
-
         // NAND: A = 8'hAA, B = 8'h5A
         ALU_Oper = 3'b110; A = 8'hAA; B = 8'h5A;
       	#10;
-        
       	// If A > B: A = 8'h13, B = 8'h12
         ALU_Oper = 3'b111; A = 8'h13; B = 8'h12;
       	#10;
-
         $finish;
     end
 endmodule
